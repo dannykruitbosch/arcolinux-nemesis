@@ -1,31 +1,31 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
-# Author 	: Erik Dubois
-# Website : https://www.erikdubois.be
-# Website	: https://www.arcolinux.info
-# Website	:	./https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxforum.com
+# Author 	: Danny Kruitbosch
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
 
-#software from Arch Linux repositories
+# IDE tools
+sudo pacman -S --noconfirm --needed community/code
+yay -S --noconfirm --needed aur/intellij-idea-ultimate-edition
 
-#sudo pacman -S --noconfirm --needed autorandr
-sudo pacman -S --noconfirm --needed community/pass
+# Test tools
+yay -S --noconfirm --needed aur/postman-bin
 
-yay -S --noconfirm --needed zsh-theme-powerlevel10k-git
-yay -S --noconfirm --needed aur/pass-git-helper
-yay -S --noconfirm --needed aur/slack-desktop
-yay -S --noconfirm --needed aur/python-umonitor-git
-yay -S --noconfirm --needed aur/bitwarden-bin
+# Docker stuff
+sudo pacman -S --noconfirm --needed community/docker
+sudo pacman -S --noconfirm --needed community/docker-compose
+sudo usermod -aG docker $USER
+
+# K8S and gcloud
+yay -S --noconfirm --needed aur/kubectl-bin
+curl https://sdk.cloud.google.com | bash
 
 ###############################################################################################
 
 echo "################################################################"
-echo "################### core software installed"
+echo "################### Development IDE, test, container and cloud software installed"
 echo "################################################################"
