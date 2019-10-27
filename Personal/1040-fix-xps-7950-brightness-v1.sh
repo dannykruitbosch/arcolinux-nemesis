@@ -14,6 +14,7 @@ installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 sudo cp $installed_dir/scripts/xbacklightmon.sh /usr/local/bin
 sudo chown root:root /usr/local/bin/xbacklightmon.sh
 sudo chmod 755 /usr/local/bin/xbacklightmon.sh
+sudo usermod -aG video $USER
 
 # Copy service definition
 [ -d $HOME"/.config/systemd" ] || mkdir -p $HOME"/.config/systemd"
