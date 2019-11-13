@@ -10,7 +10,8 @@ set -e
 
 # Nodejs is installed by default, npm/yarn needs to be added
 sudo pacman -S --noconfirm --needed community/npm
-sudo pacman -S --noconfirm --needed community/yarn 
+sudo pacman -S --noconfirm --needed community/yarn
+sudo pacman -S --noconfirm --needed community/go
 
 # All JVM related sdk are managed through SDKMAN (see https://sdkman.io/)
 curl -s "https://get.sdkman.io" | bash
