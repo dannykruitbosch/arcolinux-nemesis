@@ -22,8 +22,8 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk version
 
 # Install tools and SDKs (if no version given, sdkman will install default version)
-sdk install java 8.0.222.hs-adpt
-sdk install java
+sdk install java 8.0.242.hs-adpt
+sdk install java 11.0.6.hs-adpt
 sdk install scala
 sdk install kotlin
 sdk install gradle
